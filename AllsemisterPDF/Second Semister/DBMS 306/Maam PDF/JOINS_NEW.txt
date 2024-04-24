@@ -1,0 +1,56 @@
+select *from customer;
+select *from order_info;
+
+select *from customer, order_info;
+select c.cust_id, cust_name, amount from customer c LEFT OUTER JOIN
+ order_info o ON c.cust_id=o.cust_id;
+select c.cust_id, cust_name, amount from customer c RIGHT OUTER JOIN order_info o ON c.cust_id=o.cust_id;
+select c.cust_id, cust_name, amount from customer c FULL OUTER JOIN order_info o ON c.cust_id=o.cust_id;
+create table employee( emp_id number(10), emp_name varchar(20), salary number(10));
+create table dept(emp_id number(10), department varchar(20));
+insert into employee values( 109, 'Kia', 70000);
+insert into dept values(103,'CSE');
+insert into dept values(104,'ECE');
+insert into dept values(105,'CSE');
+insert into dept values(106,'CSE');
+insert into dept values(107,'ECE');
+select e.emp_id,salary,d.department from employee e, dept d where
+ e.emp_id=d.emp_id and department='CSE';
+select *from employee,dept;
+
+select e.emp_id,salary,d.department from employee e LEFT OUTER JOIN dept d ON
+ e.emp_id=d.emp_id;
+
+select*from employee natural join dept ;
+select *from customer;
+
+select *from order_info;
+
+select c.cust_id, cust_name, amount from customer c, order_info o where c.cust_id= o.cust_id;
+select c.cust_id, c.cust_name, o.amount from customer c INNER JOIN order_info o ON c.cust_id= o.cust_id;
+select *from customer NATURAL JOIN order_info;
+
+select c.cust_id, c.cust_name, c.contact_no, o.order_id, o.amount from customer c, 
+order_info o where c.cust_id=o.cust_id;
+select *from customer NATURAL JOIN order_info;
+
+select *from customer cross join order_info;
+select *from customer,order_info;
+
+select c.cust_id, c.cust_name, o.amount from customer c, order_info o where
+ c.cust_id= o.cust_id(+);
+select c.cust_id, c.cust_name, o.amount from customer c, order_info o where
+ c.cust_id(+)= o.cust_id;
+
+
+
+select c.cust_id, cust_name, amount from customer c FULL OUTER JOIN order_info o ON c.cust_id = o.cust_id;
+
+
+
+---------------------AGGREGATE FUNCTIONS-------------------
+SELECT MAX(Amount) as Max_amount from order_info
+SELECT COUNT(cust_id) As No_of_Cust FROM order_info where amount>5000;
+SELECT AVG(Amount) as Mean_amount from order_info;
+SELECT MIN(Amount) as min_amount from order_info;
+SELECT SUM(Amount) As Total_Payable from order_info;

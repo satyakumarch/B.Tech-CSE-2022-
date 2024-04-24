@@ -1,0 +1,72 @@
+Login AS system and execute the following:
+-----------------DCL---------------
+Step 1) Login as System
+create user user123 identified by abc123;
+GRANT create session to user123;
+GRANT create any table to user123;
+GRANT unlimited tablespace to user123;
+GRANT drop any table to user123;
+
+Step 2)Login as user123 and password abc123;
+and create table 
+
+Step 3)
+------If you want to give all permissions:----
+GRANT sysdba to user123;
+------ TO get back pemissions---------
+REVOKE create any table from user123;
+
+
+connect/ as sysdba;
+create user alex identified by alex123;
+create user bob identified by bob123;
+grant create session to alex;
+grant create session to bob;
+create role manager;
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON customer
+TO manager;
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON order_info
+TO manager;
+Grant manager to alex,bob;
+
+--------------TCL-----------------
+Execute on RUN sql command line
+
+create table emp(emp_id number(10),
+emp_name varchar(10));
+
+insert into emp(101, 'Arun');
+insert into emp(102, 'Ajay');
+savepoint a;
+insert into emp(103, 'Girish');
+savepoint b;
+update emp set emp_id=104 where emp_name
+='Girish';
+savepoint c;
+rollback to b;
+commit;
+rollback to a;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

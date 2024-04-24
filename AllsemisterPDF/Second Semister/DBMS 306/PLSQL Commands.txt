@@ -1,0 +1,370 @@
+1. WAP TO PRINT HELLO WORLD:-
+Declare
+message varchar2(20):='Hello,World';
+Begin
+dbms_output.put_line(message);
+End;
+
+
+2. WAP TO ADD TWO NUMBER:-
+Declare
+a int;
+b int;
+c int;
+Begin
+a:=10;
+b:=20;
+c:=a+b;
+dbms_output.put_line('sum='||c);
+End;
+
+
+3. WAP TO ADD TWO NUMBER BY TAKING AN INPUT:-
+Declare
+a int;
+b int;
+c int;
+Begin
+a:=:a;
+b:=:b;
+c:=:a+b;
+dbms_output.put_line('sum='||c);
+End;
+
+
+
+4. WAP TO ADD, SUB, MUL, DIV, EXP:-
+Declare
+a int;
+b int;
+c int;
+d int;
+e int;
+f int;
+g int;
+begin
+a:=:a;
+b:=:b;
+c:=a+b;
+d:=a**b;
+e:=a-b;
+f:=a/b;
+g:=a*b;
+dbms_output.put_line('sum='||c);
+dbms_output.put_line('exp='||d);
+dbms_output.put_line('sub='||e);
+dbms_output.put_line('div='||f);
+dbms_output.put_line('mul='||g);
+End;
+
+
+
+5. WAP TO CREATE TABLE AND SELECT VALUES:-
+create table employee(Employeeid int, employeefirstname varchar(255), employeelastname varchar(255), department varchar(255), Address varchar(255));
+insert into employee(employeeid, employeefirstname, employeelastname, department, address) values(1, 'Aakash', 'Kumar', 'CSE', 'Aurangabad');
+insert into employee(employeeid, employeefirstname, employeelastname, department, address) values(2, 'Aditya', 'Prakash', 'CSE', 'Aurangabad');
+insert into employee(employeeid, employeefirstname, employeelastname, department, address) values(3, 'Rishu', 'Singh', 'ECE', 'Simra');
+insert into employee(employeeid, employeefirstname, employeelastname, department, address) values(4, 'Himanshu', 'Shekhar', 'CSE', 'Vaishali');
+insert into employee(employeeid, employeefirstname, employeelastname, department, address) values(5, 'Ujjwal', 'Kumar', 'EE', 'Siwan');
+insert into employee(employeeid, employeefirstname, employeelastname, department, address) values(6, 'Funtus', 'Raj', 'CSE', 'Aurangabad');
+select * from employee;
+
+##SELECT INTO
+/*WAP to display employee first name and employee id  using PLSQL.*/
+Declare
+name varchar(20);
+id int;
+begin
+select employeefirstname into name from employee where employeeid=1;
+select employeeid into id from employee where employeefirstname='Aditya';
+dbms_output.put_line(name);
+dbms_output.put_line(id);
+end;
+
+
+
+6. WAP TO FIND GREATER OF TWO NUMBERS:-
+//NOTE: NUM1 is same as num1.
+Declare
+Num1 int;
+Num2 int;
+begin
+num1:=:num1;
+num2:=:num2;
+if num1>num2 then
+dbms_output.put_line('Greater number is '||num1);
+else
+dbms_output.put_line('Greater number is '||num2);
+end if;
+end;
+
+
+
+7. WAP TO PRINT 1 TO 10 USING LOOP:-
+Declare 
+i int;
+begin
+i:=1;
+loop
+dbms_output.put_line(i);
+i:=i+1;
+exit when i>10;
+end loop;
+end;
+
+
+
+8. WAP TO PRINT 1 TO 50 ODD NUMBER USING LOOP:-
+Declare 
+i int;
+begin
+i:=1;
+loop
+dbms_output.put_line(i);
+i:=i+2;
+exit when i>50;
+end loop;
+end;
+
+
+
+9. WAP TO FIND SMALLEST OF TWO NUMBER:-
+declare
+a int;
+b int;
+begin
+a:=23;
+b:=34;
+if a>b then
+dbms_output.put_line('smallest num is'||b);
+else
+dbms_output.put_line('smallest num is'||a);
+end if;
+end;
+
+
+10. WAP TO PRINT 1 TO 10 BY USING WHILE LOOP:-
+declare
+a int;
+b int;
+begin
+a:=0;
+b:=10;
+while(a<10)
+loop
+a:=a+1;
+dbms_output.put_line(a);
+end loop;
+end;
+
+
+
+11. WAP TO FIND A SQUARE OF A GIVEN NUMBER:-
+Declare
+a int;
+sqr int;
+begin
+a:=:a;
+sqr:=a*a;
+dbms_output.put_line(sqr);
+end;
+
+
+
+12. WAP TO FIND SQUARES OF VARIOUS NUMBER BY USING WHILE LOOP:-
+Declare
+a int;
+begin
+a:=1;
+while a<=10
+Loop
+dbms_output.put_line(a*a);
+a:=a+1;
+end loop;
+end;
+
+
+
+13. WAP TO PRINT THE VALUE OF NUMBER A=0 TO 10:-
+Declare
+a int;
+begin
+a:=1;
+for a in 0..10
+Loop
+dbms_output.put_line('value of a='||a);
+end loop;
+end;
+
+
+
+
+14. WAP TO GENERATE THE TABLE OF A GIVEN NUMBER:-
+Declare
+total int;
+begin
+for i in 1..10
+loop
+total:= 2*i;
+dbms_output.put_line(total);
+end loop;
+end;
+
+
+15. WAP TO FIND A NUMBER IS EVEN OR ODD:-
+declare
+n int;
+r int;
+begin
+n:=:n;
+r:=MOD(n,2);
+if r = 0 THEN
+dbms_output.Put_line('Even');
+else
+dbms_output.put_line('odd');
+end if;
+end
+
+
+
+16. WAP TO FIND A GREATER NUMBER BY USING GOTO:-
+declare
+num1 number;
+num2 number;
+Begin
+num1:=:num1;
+num2:=:num2;
+if num1>num2 then
+Goto p1;
+else
+Goto p2;
+end if;
+<<p1>>
+dbms_output.put_line('num1 is bigger');
+Goto p3;
+<<p2>>
+dbms_output.put_line('num 2 is bigger');
+<<p3>>
+dbms_output.put_line('end of program');
+end;
+
+
+
+17. WAP TO FIND A GREATER NUMBER BY USING ELSIF:-
+declare
+num1 number;
+num2 number;
+Begin
+num1:=:num1;
+num2:=:num2;
+if num1>num2 then
+Goto p1;
+elsif num1<num2 then
+Goto p2;
+else
+Goto p3;
+end if;
+<<p1>>
+dbms_output.put_line('first num is greater');
+Goto p4;
+<<p2>>
+dbms_output.put_line('second num is greater');
+<<p3>>
+dbms_output.put_line('num are equal');
+<<p4>>
+null;
+end;
+
+
+
+
+18. WAP TO FIND MULTIPLICATION OF TWO NUMBER BY PROCEDURE:-
+declare
+num1 number;
+num2 number;
+mul number;
+procedure multiplication(num1 in number, num2 in number, mul out number) is
+begin
+mul:=num1*num2;
+end multiplication;
+begin
+num1:=:num1;
+num2:=:num2;
+multiplication(num1,num2,mul);
+dbms_output.put_line(mul);
+end;
+
+
+
+
+19. WAP TO FIND ADDITION OF TWO NUMBER BY PROCEDURE:-
+declare
+num1 number;
+num2 number;
+add number;
+procedure addition(num1 in number, num2 in number, add out number) is
+begin
+add:=num1+num2;
+end addition;
+begin
+num1:=:num1;
+num2:=:num2;
+addition(num1,num2,add);
+dbms_output.put_line(add);
+end;
+
+
+
+20.  WAP TO FIND MULTIPLICATION OF TWO NUMBER BY FUNCTION:-
+declare
+num1 int;
+num2 int;
+mul int;
+Function multiplication(num1 in number, num2 in number)
+Return number is mul number;
+begin
+mul:=num1*num2;
+return mul;
+end multiplication;
+begin
+num1:=:num1;
+num2:=:num2;
+mul:=multiplication(num1,num2);
+dbms_output.put_line(mul);
+end;
+
+
+
+21. WAP TO FIND THE FACTORIAL OF A NUMBER BY FUNCTION:-
+declare
+a int := :a;
+fact int;
+function factorial(a in int) 
+return int is fact int := 1;
+begin
+for i in 1..a
+loop
+fact := fact*i;
+end loop;
+return fact;
+end factorial;
+begin
+fact := factorial(a);
+dbms_output.put_line(fact);
+end;
+
+
+22. WAP TO FIND NAME SALARY BY USE OF ROWTYPE:-
+create table employee100(employeeid int, firstname varchar(250), lastname varchar(250) ,department varchar(250), salary int);
+insert into employee100(employeeid,firstname,lastname,department,salary)values(1,'john','doe','cse','10000');
+select * from employee100;
+insert into employee100(employeeid,firstname,lastname,department,salary)values(2,'steve','smith','mec','20000');
+insert into employee100(employeeid,firstname,lastname,department,salary)values(3,'doraemon','sharma','ece','30000');
+insert into employee100(employeeid,firstname,lastname,department,salary)values(4,'shinchan','singh','chem','40000');
+Declare
+emp1 employee100 %ROWTYPE;
+begin
+select * into emp1 from employee100 where employeeid= 1;
+dbms_output.put_line(emp1.firstname||'  '||emp1.salary);
+end;
+

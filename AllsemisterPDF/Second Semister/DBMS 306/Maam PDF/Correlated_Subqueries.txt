@@ -1,0 +1,27 @@
+------------------CORRELATED SUB QUERIES---------------
+select * from employee;
+1) Find the highest earning employee in each department
+select emp_name, department, salary from employee e where 1=
+( select count(distinct salary) from employee o where
+ e.department= o.department and e.salary<=o.salary);
+
+2) Find the details of the customers who have placed at least one order
+select * from customer c  where exists(select * from order_info o where 
+c.cust_id=o.cust_id);
+select * from customer;
+select * from order_info;
+
+3) Find out the customers who have not placed any order 
+select * from customer c  where not exists(select * from order_info o where c.cust_id=o.cust_id);
+select * from customer c  where not exists(select * from order_info o where c.cust_id=o.cust_id);
+select * from customer;
+select * from order_info;
+
+4)Find out the names of employees who are managers as well
+select emp_name from emp11 a where exists(select * from emp11 e where a.emp_name=e.manager);
+
+5) Find out names of employees who are managed by LEE.
+select emp_name from emp11 where manager='Lee';
+select emp_name from emp11 e where exists(select * from emp11 o where o.manager='Lee'); 
+
+
