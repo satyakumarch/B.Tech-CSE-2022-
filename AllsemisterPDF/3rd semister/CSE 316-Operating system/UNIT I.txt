@@ -1,0 +1,447 @@
+UNIT I
+
+
+1. Explain ISO/OSI reference model.
+_ Physical layer
+
+_ Data link layer
+
+_ Network layer
+
+_ Transport layer
+
+_ Session layer
+
+_ Presentation layer
+
+_ Application layer
+
+
+2. Explain the topologies of the network.
+_ Mesh topology
+
+_ Star topology
+
+_ Tree topology
+
+_ Bus topology
+
+_ Ring topology
+
+
+3. Explain the categories of networks.
+_ Local Area Network(LAN)
+
+_ Metropolitan Area Network(MAN)
+
+_ Wide Area Network(WAN)
+
+
+4. Explain coaxial cable & fiber optics.
+_ Coaxial cable
+
+_ Coaxial cable standards
+
+_ Coaxial cable connectors
+
+_ Fiber optics
+
+_ Propagation modes
+
+_ Fiber sizes
+
+_ Cable composition
+
+_ Light sources for optical cable
+
+_ Fiber optic connectors
+
+_ Advantages & disadvantages of optical fiber
+
+
+5. Explain line coding (digital to digital conversion).
+_ Unipolar
+
+_ DC component
+
+_ Synchronization
+
+_ Polar
+
+_ Non return to zero(NRZ)
+
+_ NRZ-L
+
+_ NRZ-I
+
+_ Return to zero
+
+_ Biphase
+
+_ Manchester
+
+_ Differential Manchester
+
+_ Bipolar
+
+_ Alternate Mark Inversion(AMI)
+
+_ Bipolar 8-zero substitution(B8ZS)
+
+_ High-Density Bipolar 3(HDB3)
+
+
+UNIT II
+
+1. Explain error detection and error correction techniques.
+_ Types of errors
+
+_ Single bit error
+
+_ Burst error
+
+_ Error detection
+
+_ Vertical redundancy check(VRC)
+
+_ Longitudinal redundancy check(LRC)
+
+_ Cyclic redundancy check(CRC)
+
+_ Checksum
+
+_ Error correction
+
+_ Single-bit error correction
+
+_ Hamming code
+
+_ Burst error correction
+
+
+2. Explain error control mechanism.
+_ Stop and wait ARQ
+
+_ Sliding window ARQ
+
+_ Go back-n
+
+_ Selective-reject
+
+3. Explain the flow control mechanism
+_ Stop and wait
+
+_ Sliding window.
+
+
+4. Explain the timers and time registers in FDDI.
+Time registers
+
+_ Synchronous allocation(SA)
+
+_ Target token rotation time(TTRT)
+
+_ Absolute maximum time(AMT)
+
+_ Timers
+
+_ Token rotation timer(TRT)
+
+_ Token holding timer(THT)
+
+
+5. Explain about Ethernet.
+_ Access method :CSMA/CD
+
+_ Addressing
+
+_ Electrical specification
+
+_ Frame format
+
+_ Implementation:
+
+_ 10 base 5 :Thick Ethernet
+
+_ 10 base 2 :Thin Ethernet
+
+_ 10 base T :Twisted-pair Ethernet
+
+_ 1 base 5 :Star LAN
+
+
+6. Explain the frame format for token ring and token bus.
+_ Access method: Token passing
+
+_ Priority and reservation
+
+_ Time limits
+
+_ Monitor stations
+
+
+7. Explain about HDLC.
+_ Station types:
+
+_ Primary station
+
+_ Secondary station
+
+_ Configurations:
+
+_ Unbalanced configuration
+
+_ Symmetrical configuration
+
+_ Balanced configuration
+
+_ Modes of communication:
+
+_ Normal Response Mode(NRM)
+
+_ Asynchronous Response Mode(ARM)
+
+_ Asynchronous Balanced Mode(ABM)
+
+_ Frames :
+
+_ Flag field
+
+_ Address field
+
+_ Control field
+
+_ Information field
+
+_ FCS field
+
+
+UNIT III
+
+1. Explain the two approaches of packet switching techniques.
+_ Datagram approach
+
+_ Virtual circuit approach
+
+_ Switched virtual circuit(SVC)
+
+_ Permanent virtual circuit(PVC)
+
+_ Circuit – switched connection versus virtual – circuit connection
+
+_ Path versus route
+
+_ Dedicated versus shared
+
+
+2. Explain IP addressing method.
+_ Internetwork protocol (IP)
+
+_ Datagram
+
+_ Addressing
+
+_ Classes
+
+_ Dotted decimal notation
+
+_ A sample internet
+
+
+3. Define routing & explain distance vector routing and link state routing.
+_ Distance vector routing
+
+_ Sharing information
+
+_ Routing table
+
+_ Creating the table
+
+_ Updating the table
+
+_ Updating algorithm
+
+_ Link state routing
+
+_ Information sharing
+
+_ Packet cost
+
+_ Link state packet
+
+_ Getting information about neighbors
+
+_ Initialization
+
+_ Link state database
+
+
+4. Define bridge and explain the type of bridges.
+_ Bridges
+
+_ Types of bridges
+
+_ Simple bridge
+
+_ Multiport bridge
+
+_ Transparent bridge
+
+
+5. Explain subnetting
+_ Subnetting
+
+_ Three levels of hierarchy
+
+_ Masking
+
+_ Masks without subnetting
+
+_ Masks with subnetting
+
+_ Finding the subnetwork address
+
+_ Boundary level masking
+
+_ Non-boundary level masking
+
+
+6. Write short notes about repeaters, routers and gateways.
+_ Repeaters
+
+_ Routers
+
+_ Routing concepts
+
+_ Least-cost routing
+
+_ Non adaptive routing
+
+_ Adaptive routing
+
+_ Packet lifetime
+
+_ Gateways
+
+
+UNIT IV
+
+1. Explain the duties of transport layer.
+End to end delivery
+Addressing
+Reliable delivery Error control Sequence control Loss control Duplication control
+Flow control
+Multiplexing
+
+2. Explain socket in detail.
+Introduction Explanation program
+
+3. Explain UDP & TCP.
+_ User Datagram Protocol(UDP)
+
+_ Source port address
+
+_ Destination port address
+
+_ Total length
+
+_ Checksum
+
+_ Transmission Control Protocol(TCP)
+
+_ Source port address
+
+_ Destination port address
+
+_ Sequence number
+
+_ Acknowledgement number
+
+_ Header length
+
+_ Reserved
+
+_ Control
+
+_ Window size
+
+_ Check sum
+
+_ Urgent pointer
+
+_ Options and padding
+
+
+4. Explain about congestion control.
+_ Congestion avoidance
+
+_ BECN
+
+_ FECN
+
+_ Four situations
+
+_ Discarding
+
+
+5. Explain leaky bucket and token bucket algorithm
+_ Leaky bucket algorithm
+
+_ Leaky bucket
+
+_ Switch controlling the output rate
+
+_ Flowchart
+
+
+UNIT V
+
+1. Explain the functions of SMTP.
+System for sending messages to other computer users based on e-mail addresses. SMTP provides mail exchange between users on the same
+
+or different computers.
+
+User Agent
+Mail Transfer Agent
+Multipurpose Internet Mail Extensions
+Post Office Protocol
+
+2. Write short notes on FTP.
+Transfer a file from one system to another.
+TCP connections
+Basic model of FTP
+
+3. Explain about HTTP.
+HTTP transactions
+HTTP messages
+URL
+
+4. Explain the WWW in detail.
+Hypertext & Hypermedia
+Browser Architecture
+Categories of Web Documents
+HTML
+CGI
+Java
+
+5. Explain the type of encryption/decryption method.
+Conventional Methods:
+
+Character-Level Encryption: Substitutional & Transpositional
+
+Bit-Level Encryption:
+
+Encoding/Decoding, Permutation, Substitution, Product, Exclusive-Or & Rotation
+
+Public key Methods
+
+
+6. Explain about RSA algorithm.
+Public key Encryption technique.
+Encryption algorithm
+Decryption algorithm
+Security in RSA
+7. Explain about secret key encryption algorithm.
+Data Encryption Standard
+Algorithm
+Sub key generation
